@@ -1,0 +1,3 @@
+class Huihuo < ActiveRecord::Base
+  belongs_to :project
+end

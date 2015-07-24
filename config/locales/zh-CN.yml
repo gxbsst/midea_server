@@ -1,0 +1,40 @@
+zh-CN:
+  activerecord:
+      models:
+        project: '项目'
+        huihuo: '回货情况'
+      attributes:
+        project:
+          no: "编号"
+          name: "名称"
+          note: "备注"
+          leader_design: "机构负责人"
+          leader_elec: "电控负责人"
+          leader_manufacture: "制造负责人"
+          start_plan_at: "制造计划启动时间"
+          start_at: "制造实际启动时间"
+          shipping_plan_at: "制造计划出货时间"
+          shipping_at: "制造实际出货时间"
+          debug_plan_at: "调试计划完成时间"
+          debug_at: "调试实际完成时间"
+          progress_goods: "回货进度"
+          progress_design: "机构进度"
+          progress_elec: "电控进度"
+        huihuo:
+          project: "项目"
+          name: "名称"
+          blueprint_no: "图号"
+          num: "数量"
+          unit: "单位"
+          total: "总数"
+          material: "材料"
+          material_handle: "材质处理"
+          design_require_at: "设计需求时间"
+          order_at: "下单日期"
+          arrival_plan_at: "供应商反馈到货日期"
+          arrival_at: "实际回货日期"
+          supplier: "供应商"
+          note: "备注"
+
+
+
