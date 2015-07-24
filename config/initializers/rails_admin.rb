@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
 
-  config.main_app_name = ["美的管理后台"]
+  config.main_app_name = ["美的管理后台", ""]
 
   ### Popular gems integration
 
@@ -34,7 +34,21 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.model 'Huihuo' do
+    parent Project
+    weight -1
+    navigation_icon ' icon-download'
+  end
+
     config.model 'Project' do
+      list do
+        field :no
+        field :name
+        field :huihuos do
+          searchable :name
+        end
+      end
+      navigation_icon 'icon-th'
       edit do
         field :no do
           label "编号"
