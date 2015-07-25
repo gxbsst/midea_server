@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   match 'projects', to: 'projects#index', via: [:options], :constraints => {:format => :json}
+  match 'projects/:id', to: 'projects#show', via: [:options], :constraints => {:format => :json}
+  match "projects/:project_id/huihuos", to: 'huihuos#index', via: [:options], :constraints => {:format => :json}
   resources :projects, :defaults => { :format => :json } do
     resources :huihuos
   end

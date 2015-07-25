@@ -1,0 +1,119 @@
+<ion-view class="home">
+    <ion-content>
+        <div class="title">
+            <table>
+                <tr>
+                    <td class="td1"><h2>项目进度表</h2></td>
+                    <td class="td2">
+                        <div class="circle"></div>
+                        <p>计划时间</p>
+                    </td>
+                    <td class="td3">
+                        <div class="circle"></div>
+                        <p>实际时间</p></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="list">
+            <table class="outer">
+                <thead>
+                <tr>
+                    <th>项目号／项目名称</th>
+                    <th>责任人</th>
+                    <th>制造启动时间 <br/><span>计划／实际</span></th>
+                    <th>制造出货时间 <br/><span>计划／实际</span></th>
+                    <th>调试完成时间 <br/><span>计划／实际</span></th>
+                    <th>当前进度(％)</th>
+                    <th>备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="project in projects">
+                    <td class="td1">{{project.no}}/{{project.name}} <br/><a ng-href="#/app/projects/{{project.id}}/huihuos"><img src="img/check.png" alt=""/></a></td>
+                    <td>
+                        <ul>
+                            <li>机构: {{project.leader_design}}</li>
+                            <li>电控: {{project.leader_elec}}</li>
+                            <li>制造: {{project.leader_manufacture}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="circle"></div>
+                                    <p>{{project.start_plan_at}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="circle blue"></div>
+                                    <p>{{project.start_at}}</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="circle"></div>
+                                    <p>{{project.shipping_plan_at}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="circle blue"></div>
+                                    <p>{{project.shipping_at}}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="circle"></div>
+                                    <p>{{project.debug_plan_at}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="circle blue"></div>
+                                    <p>{{project.debug_at}}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        回货：已完成{{project.progress_goods}}
+                        <br/>
+                       <div class="progress">
+                           <div class="green" style="width: {{project.progress_goods}};"></div>
+                       </div>
+                        <br/>
+                        机构：已完成{{project.progress_design}}
+                        <br/>
+                        <div class="progress">
+                            <div class="zi" style="width: {{project.progress_design}};"></div>
+                        </div>
+                        <br/>
+                        电控：已完成{{project.progress_elec}}
+                        <br/>
+                        <div class="progress">
+                            <div class="yellow" style="width: {{project.progress_elec}};"></div>
+                        </div>
+                    </td>
+                    <td>{{project.note}}</td>
+                </tr>
+
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </ion-content>
+</ion-view>

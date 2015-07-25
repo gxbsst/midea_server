@@ -1,0 +1,64 @@
+<ion-view class="home">
+    <ion-content>
+        <div class="title">
+            <table>
+                <tr>
+                    <td class="td1"><h2>{{project.no}}/{{project.name}}</h2></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="list">
+            <table class="outer">
+                <thead>
+                <tr>
+
+                    <th>名称</th>
+                    <th>图号</th>
+                    <th>数量</th>
+                    <th>单位</th>
+                    <th>总数</th>
+                    <th>材料</th>
+                    <th>材质处理</th>
+                    <th>设计需求日期</th>
+                    <th>下单日期</th>
+                    <th>供应商反馈到货日期</th>
+                    <th>实际回货日期</th>
+                    <th>供应商</th>
+                    <th>备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="huihuo in huihuos">
+
+                    <td>
+                        {{huihuo.name}}
+                    </td>
+                    <td>
+                        {{huihuo.blueprint_no}}
+                    </td>
+                    <td>
+                        {{huihuo.num}}
+                    </td>
+                    <td>
+                        {{huihuo.unit}}
+                    </td>
+                    <td>{{huihuo.total}}</td>
+                    <td>{{huihuo.material}}</td>
+                    <td>{{huihuo.material_handle}}</td>
+                    <td>{{huihuo.design_require_at}}</td>
+                    <td>{{huihuo.order_at}}</td>
+                    <td>{{huihuo.arrival_plan_at}}</td>
+                    <td>{{huihuo.arrival_at}}</td>
+                    <td><span class="blue">{{huihuo.supplier}}</span></td>
+                    <td><span class="red">{{huihuo.note}}</span></td>
+                </tr>
+
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </ion-content>
+</ion-view>
