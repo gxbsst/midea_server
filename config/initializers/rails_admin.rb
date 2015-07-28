@@ -54,6 +54,7 @@ RailsAdmin.config do |config|
           label "编号"
         end
         field :name
+        field :num
         field :leader_design
         field :leader_elec
         field :leader_manufacture

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150724074504) do
+ActiveRecord::Schema.define(version: 20150728094703) do
 
   create_table "huihuos", force: :cascade do |t|
     t.integer  "project_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150724074504) do
     t.string   "progress_elec"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "num"
   end
 
 end
