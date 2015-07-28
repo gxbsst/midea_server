@@ -20,6 +20,7 @@
                 <thead>
                 <tr>
                     <th>项目号／项目名称</th>
+                    <th width="5%">数量</th>
                     <th>责任人</th>
                     <th>制造启动时间 <br/><span>计划／实际</span></th>
                     <th>制造出货时间 <br/><span>计划／实际</span></th>
@@ -31,6 +32,7 @@
                 <tbody>
                 <tr ng-repeat="project in projects">
                     <td class="td1">{{project.no}}/{{project.name}} <br/><a ng-href="#/app/projects/{{project.id}}/huihuos"><img src="img/check.png" alt=""/></a></td>
+                    <td>{{project.num || 0}} 套</td>
                     <td>
                         <ul>
                             <li>机构: {{project.leader_design}}</li>
