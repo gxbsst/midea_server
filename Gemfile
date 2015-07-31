@@ -35,6 +35,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'rails_admin-i18n'
 gem 'tzinfo-data', platforms: [:mingw,:mswin]
+gem 'kaminari'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

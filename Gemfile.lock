@@ -192,6 +192,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   rails (= 4.2.1)
   rails_admin
   rails_admin-i18n

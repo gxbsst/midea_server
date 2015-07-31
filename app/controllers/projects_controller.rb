@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
   # respond_to :json
   def index
-   @projects = Project.all
+    page = params[:page] || 1
+    @projects = Project.all.page(page).per(1)
   end
 
   def show

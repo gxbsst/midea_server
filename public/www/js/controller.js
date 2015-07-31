@@ -2,19 +2,33 @@ angular.module('starter.controllers', ['ngSanitize'])
     .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
     })
-    .controller('ProjectCtrl', function ($scope, Project, $ionicLoading) {
+    .controller('ProjectCtrl', function ($scope, Project, $ionicLoading, $interval) {
 
         $scope.reload = function () {
             $ionicLoading.show({
                 template: '正在载入...'
             });
-            Project.query(function (projects) {
-                $scope.projects = projects;
-                console.log(projects);
-            })
-                .$promise.then(function () {
-                    $ionicLoading.hide();
-                });
+
+            function loadData(page){
+                Project.query({page: page},function (projects) {
+                    $scope.projects = projects;
+                    console.log(projects);
+                })
+                    .$promise.then(function () {
+                        $ionicLoading.hide();
+                    });
+            }
+
+            var page = 0;
+            var total_page = 2;
+            $interval( function() {
+                page++
+                loadData(page);
+                if(page == total_page) {
+                    page = 0;
+                }
+            }, 2000);
+
         };
 
         $scope.reload();
