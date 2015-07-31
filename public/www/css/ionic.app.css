@@ -7734,9 +7734,25 @@ body .list table.outer {
       font-size: 15pt; }
       body .list table.outer thead th span {
         font-size: 10pt; }
+      body .list table.outer thead th.th1 {
+        width: 15%; }
+      body .list table.outer thead th.th2 {
+        width: 10%; }
+      body .list table.outer thead th.th3 {
+        width: 10%; }
+      body .list table.outer thead th.th4 {
+        width: 13%; }
+      body .list table.outer thead th.th5 {
+        width: 13%; }
+      body .list table.outer thead th.th6 {
+        width: 13%; }
+      body .list table.outer thead th.th7 {
+        width: 15%; }
+      body .list table.outer thead th.th8 {
+        width: 10%; }
   body .list table.outer tr td {
     color: #7b7c7d;
-    font-size: 13pt;
+    font-size: 12pt;
     font-weight: bold;
     padding: 10px;
     vertical-align: middle;

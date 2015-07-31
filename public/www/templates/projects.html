@@ -19,14 +19,14 @@
             <table class="outer">
                 <thead>
                 <tr>
-                    <th>项目号／项目名称</th>
-                    <th width="5%">数量</th>
-                    <th>责任人</th>
-                    <th>制造启动时间 <br/><span>计划／实际</span></th>
-                    <th>制造出货时间 <br/><span>计划／实际</span></th>
-                    <th>调试完成时间 <br/><span>计划／实际</span></th>
-                    <th>当前进度(％)</th>
-                    <th>备注</th>
+                    <th class="th1">项目号／项目名称</th>
+                    <th class="th2" width="5%">数量</th>
+                    <th class="th3">责任人</th>
+                    <th class="th4">制造启动时间 <br/><span>计划／实际</span></th>
+                    <th class="th5">制造出货时间 <br/><span>计划／实际</span></th>
+                    <th class="th6">调试完成时间 <br/><span>计划／实际</span></th>
+                    <th class="th7">当前进度(％)</th>
+                    <th class="th8">备注</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -90,20 +90,15 @@
                         </table>
                     </td>
                     <td>
-                        回货：已完成{{project.progress_goods}}
-                        <br/>
+                        <p>回货：已完成{{project.progress_goods}}</p>
                        <div class="progress">
                            <div class="green" style="width: {{project.progress_goods}};"></div>
                        </div>
-                        <br/>
-                        机构：已完成{{project.progress_design}}
-                        <br/>
+                        <p>机构：已完成{{project.progress_design}}</p>
                         <div class="progress">
                             <div class="zi" style="width: {{project.progress_design}};"></div>
                         </div>
-                        <br/>
-                        电控：已完成{{project.progress_elec}}
-                        <br/>
+                        <p>电控：已完成{{project.progress_elec}}</p>
                         <div class="progress">
                             <div class="yellow" style="width: {{project.progress_elec}};"></div>
                         </div>

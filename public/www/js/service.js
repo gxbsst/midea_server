@@ -1,3 +1,5 @@
+//var host = "http://localhost:4001";
+var host = '';
 angular.module('starter.services', ['ngResource'])
 
     .service('Project', function ($resource, Actions) {
