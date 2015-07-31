@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem "rails_admin_import", "~> 1.0.0"
+gem "rails_admin_import", "~> 1.0.0", path: "./lib/"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rails_admin'
