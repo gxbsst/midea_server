@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   # respond_to :json
   def index
     page = params[:page] || 1
-    @projects = Project.all.page(page).per(30)
+    @projects = Project.all.page(page).per(10000)
   end
 
   def show

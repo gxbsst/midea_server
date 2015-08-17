@@ -9,17 +9,25 @@ angular.module('starter.controllers', ['ngSanitize'])
             $ionicLoading.show({
                 template: '正在载入...'
             });
-            var page = 0,
-                loader = function () {
-                    page++;
-                    loadData(page).then(function(data){
-                        if (page === data.total_pages) {
-                            page = 0;
-                        }
-                        $timeout(loader, 3000);
-                    });
-                };
-            loader();
+
+            Prodject.query(function (projects) {
+                $scope.projects = projects;
+
+            }).$promise.then(function () {
+                    $ionicLoading.hide();
+                });
+
+            //var page = 0,
+            //    loader = function () {
+            //        page++;
+            //        loadData(page).then(function(data){
+            //            if (page === data.total_pages) {
+            //                page = 0;
+            //            }
+            //            $timeout(loader, 3000);
+            //        });
+            //    };
+            //loader();
         }
 
         function loadData(page) {
