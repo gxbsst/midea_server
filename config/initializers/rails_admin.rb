@@ -53,6 +53,7 @@ RailsAdmin.config do |config|
         field :no do
           label "编号"
         end
+        field :state
         field :name
         field :num
         field :leader_design

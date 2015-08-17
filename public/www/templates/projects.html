@@ -30,7 +30,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="project in projects">
+                <tr ng-repeat="project in projects" ng-class="{warning: project.state == 'exception'}">
                     <td class="td1">{{project.no}}/{{project.name}} <br/><a ng-href="#/app/projects/{{project.id}}/huihuos"><img src="img/check.png" alt=""/></a></td>
                     <td>{{project.num || 0}} 套</td>
                     <td>

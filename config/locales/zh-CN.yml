@@ -255,6 +255,7 @@ zh-CN:
         huihuo: '回货情况'
       attributes:
         project:
+          state: "状态"
           huihuos: "回货"
           no: "编号"
           name: "名称"
