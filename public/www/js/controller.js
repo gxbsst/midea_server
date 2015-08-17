@@ -16,7 +16,7 @@ angular.module('starter.controllers', ['ngSanitize'])
                         if (page === data.total_pages) {
                             page = 0;
                         }
-                        $timeout(loader, 2000);
+                        $timeout(loader, 3000);
                     });
                 };
             loader();
